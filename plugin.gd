@@ -47,7 +47,7 @@ func _exit_tree():
 func _on_export_context():
 	# Show the export context window
 	if not export_window:
-		export_window = preload("res://addons/texter/scenes/export_context.tscn").instantiate()
+		export_window = preload("res://addons/texter/export_context.tscn").instantiate()
 		get_editor_interface().get_base_control().add_child(export_window)
 	export_window.popup_centered()
 
@@ -80,7 +80,7 @@ func _on_quick_export():
 	var output_path = last_dir + ("/" if not last_dir.ends_with("/") else "") + "proj_" + timestamp + "." + extension
 	
 	# Create and show export window for progress only
-	export_window = preload("res://addons/texter/scenes/export_context.tscn").instantiate()
+	export_window = preload("res://addons/texter/export_context.tscn").instantiate()
 	get_editor_interface().get_base_control().add_child(export_window)
 	export_window.start_quick_export(output_path, preset, format)
 
