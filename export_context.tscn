@@ -1,0 +1,341 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3x2k7m8nq4k"]
+
+[ext_resource type="Script" uid="uid://c8lhuaukx66wq" path="res://addons/texter/scripts/export_context.gd" id="1"]
+
+[sub_resource type="Image" id="Image_lpgsv"]
+data = {
+"data": PackedByteArray(255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 92, 92, 127, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 255, 255, 92, 92, 127, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 92, 92, 127, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 92, 92, 127, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 231, 255, 90, 90, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 90, 90, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 42, 255, 90, 90, 0, 255, 94, 94, 0, 255, 91, 91, 42, 255, 93, 93, 233, 255, 92, 92, 232, 255, 93, 93, 41, 255, 90, 90, 0, 255, 94, 94, 0, 255, 91, 91, 42, 255, 93, 93, 233, 255, 92, 92, 232, 255, 92, 92, 0, 255, 92, 92, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 45, 255, 93, 93, 44, 255, 91, 91, 0, 255, 91, 91, 42, 255, 91, 91, 42, 255, 93, 93, 0, 255, 91, 91, 45, 255, 93, 93, 44, 255, 91, 91, 0, 255, 91, 91, 42, 255, 91, 91, 42, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 45, 255, 92, 92, 235, 255, 92, 92, 234, 255, 89, 89, 43, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 45, 255, 92, 92, 235, 255, 92, 92, 234, 255, 89, 89, 43, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 91, 91, 59, 255, 92, 92, 61, 255, 92, 92, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 91, 91, 59, 255, 92, 92, 61, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_77c05"]
+image = SubResource("Image_lpgsv")
+
+[node name="ExportContextWindow" type="Window"]
+title = "Export Context"
+initial_position = 1
+size = Vector2i(1200, 1000)
+transient = true
+exclusive = true
+min_size = Vector2i(800, 600)
+script = ExtResource("1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="HBoxContainerPresets" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="PresetOption" type="OptionButton" parent="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainerPresets"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Select a preset"
+selected = 0
+item_count = 4
+popup/item_0/text = "All Files"
+popup/item_0/id = 0
+popup/item_1/text = "Scripts Only"
+popup/item_1/id = 1
+popup/item_2/text = "Scenes Only"
+popup/item_2/id = 2
+popup/item_3/text = "Core Project"
+popup/item_3/id = 3
+
+[node name="SavePresetButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainerPresets"]
+layout_mode = 2
+tooltip_text = "Save new preset"
+icon = SubResource("ImageTexture_77c05")
+flat = true
+
+[node name="UpdatePresetButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainerPresets"]
+layout_mode = 2
+tooltip_text = "Update selected preset"
+icon = SubResource("ImageTexture_77c05")
+flat = true
+
+[node name="DeletePresetButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainerPresets"]
+layout_mode = 2
+tooltip_text = "Delete selected preset"
+icon = SubResource("ImageTexture_77c05")
+flat = true
+
+[node name="HSeparator1" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ExclusionsLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Exclusions"
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tab_alignment = 1
+current_tab = 0
+tab_focus_mode = 0
+
+[node name="Extensions" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+metadata/_tab_index = 0
+
+[node name="HBoxContainerExtensionsHeader" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Extensions"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="SearchExtensions" type="LineEdit" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Extensions/HBoxContainerExtensionsHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Search extensions"
+placeholder_text = "Search..."
+
+[node name="SelectAllExtensionsButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Extensions/HBoxContainerExtensionsHeader"]
+layout_mode = 2
+tooltip_text = "Exclude all extensions"
+icon = SubResource("ImageTexture_77c05")
+flat = true
+
+[node name="SelectNoneExtensionsButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Extensions/HBoxContainerExtensionsHeader"]
+layout_mode = 2
+tooltip_text = "Clear all extension exclusions"
+icon = SubResource("ImageTexture_77c05")
+flat = true
+
+[node name="ExtensionsScroll" type="ScrollContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Extensions"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ExtensionVBox" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Extensions/ExtensionsScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="Folders" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 5
+metadata/_tab_index = 1
+
+[node name="HBoxContainerFoldersHeader" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Folders"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="SearchFolders" type="LineEdit" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Folders/HBoxContainerFoldersHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Search folders"
+placeholder_text = "Search..."
+clear_button_enabled = true
+
+[node name="SelectAllFoldersButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Folders/HBoxContainerFoldersHeader"]
+layout_mode = 2
+tooltip_text = "Exclude all folders"
+icon = SubResource("ImageTexture_77c05")
+flat = true
+
+[node name="SelectNoneFoldersButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Folders/HBoxContainerFoldersHeader"]
+layout_mode = 2
+tooltip_text = "Clear all folder exclusions"
+icon = SubResource("ImageTexture_77c05")
+flat = true
+
+[node name="FoldersScroll" type="ScrollContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Folders"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="FolderVBox" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Folders/FoldersScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="Scenes" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 5
+metadata/_tab_index = 2
+
+[node name="HBoxContainerScenesHeader" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Scenes"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="SearchScenes" type="LineEdit" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Scenes/HBoxContainerScenesHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Search scenes"
+placeholder_text = "Search..."
+clear_button_enabled = true
+
+[node name="SelectAllScenesButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Scenes/HBoxContainerScenesHeader"]
+layout_mode = 2
+tooltip_text = "Exclude all scenes"
+icon = SubResource("ImageTexture_77c05")
+flat = true
+
+[node name="SelectNoneScenesButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Scenes/HBoxContainerScenesHeader"]
+layout_mode = 2
+tooltip_text = "Clear all scene exclusions"
+icon = SubResource("ImageTexture_77c05")
+flat = true
+
+[node name="ScenesScroll" type="ScrollContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Scenes"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SceneVBox" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Scenes/ScenesScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainerFormat" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="FormatOption" type="OptionButton" parent="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainerFormat"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Select output format"
+selected = 0
+item_count = 3
+popup/item_0/text = "JSON (.json)"
+popup/item_0/id = 0
+popup/item_1/text = "Markdown (.md)"
+popup/item_1/id = 1
+popup/item_2/text = "Text (.txt)"
+popup/item_2/id = 2
+
+[node name="EstimateLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Estimated files to export: 19"
+
+[node name="HBoxContainerActions" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="ExportButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainerActions"]
+layout_mode = 2
+tooltip_text = "Export context"
+text = "Export"
+
+[node name="CancelButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainerActions"]
+layout_mode = 2
+tooltip_text = "Cancel"
+text = "Cancel"
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Export progress"
+
+[node name="ProgressLabel" type="Label" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="SavePresetDialog" type="Window" parent="."]
+title = "Save Preset"
+initial_position = 2
+size = Vector2i(300, 200)
+visible = false
+transient = true
+exclusive = true
+min_size = Vector2i(300, 200)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SavePresetDialog"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SavePresetDialog/VBoxContainer"]
+layout_mode = 2
+text = "Preset Name:"
+
+[node name="PresetNameLineEdit" type="LineEdit" parent="SavePresetDialog/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Enter the name for the new preset."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SavePresetDialog/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="SaveButton" type="Button" parent="SavePresetDialog/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Save the preset with the given name."
+text = "Save"
+
+[node name="CancelButton" type="Button" parent="SavePresetDialog/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Close the dialog without saving."
+text = "Cancel"
+
+[node name="DeletePresetDialog" type="ConfirmationDialog" parent="."]
+title = "Delete Preset"
+initial_position = 2
+size = Vector2i(400, 250)
+min_size = Vector2i(400, 250)
+dialog_text = "Are you sure you want to delete this preset?"
+
+[connection signal="item_selected" from="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainerPresets/PresetOption" to="." method="_on_preset_option_item_selected"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainerPresets/SavePresetButton" to="." method="_on_save_preset_button_pressed"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainerPresets/UpdatePresetButton" to="." method="_on_update_preset_button_pressed"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainerPresets/DeletePresetButton" to="." method="_on_delete_preset_confirmed"]
+[connection signal="text_changed" from="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Extensions/HBoxContainerExtensionsHeader/SearchExtensions" to="." method="_on_search_extensions_text_changed"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Extensions/HBoxContainerExtensionsHeader/SelectAllExtensionsButton" to="." method="_on_select_all_extensions_pressed"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Extensions/HBoxContainerExtensionsHeader/SelectNoneExtensionsButton" to="." method="_on_select_none_extensions_pressed"]
+[connection signal="text_changed" from="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Folders/HBoxContainerFoldersHeader/SearchFolders" to="." method="_on_search_folders_text_changed"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Folders/HBoxContainerFoldersHeader/SelectAllFoldersButton" to="." method="_on_select_all_folders_pressed"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Folders/HBoxContainerFoldersHeader/SelectNoneFoldersButton" to="." method="_on_select_none_folders_pressed"]
+[connection signal="text_changed" from="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Scenes/HBoxContainerScenesHeader/SearchScenes" to="." method="_on_search_scenes_text_changed"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Scenes/HBoxContainerScenesHeader/SelectAllScenesButton" to="." method="_on_select_all_scenes_pressed"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/TabContainer/Scenes/HBoxContainerScenesHeader/SelectNoneScenesButton" to="." method="_on_select_none_scenes_pressed"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainerActions/ExportButton" to="." method="_on_export_pressed"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainerActions/CancelButton" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="SavePresetDialog/VBoxContainer/HBoxContainer/SaveButton" to="." method="_on_save_preset_save_pressed"]
+[connection signal="pressed" from="SavePresetDialog/VBoxContainer/HBoxContainer/CancelButton" to="." method="_on_save_preset_cancel_pressed"]
+[connection signal="confirmed" from="DeletePresetDialog" to="." method="_on_delete_preset_confirmed"]
