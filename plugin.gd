@@ -20,8 +20,8 @@ func _enter_tree():
 		quick_export_config.set_value("settings", "format", "JSON")
 		quick_export_config.save(QUICK_EXPORT_CONFIG_PATH)
 	# Add menu items under Tools
-	add_tool_menu_item(tr("Export Context"), Callable(self, "_on_export_context"))
-	add_tool_menu_item(tr("Quick Context"), Callable(self, "_on_quick_export"))
+	add_tool_menu_item("Export Context", Callable(self, "_on_export_context"))
+	add_tool_menu_item("Quick Context", Callable(self, "_on_quick_export"))
 	# Add shortcut for Quick Context (Ctrl+Shift+E)
 	var shortcut = InputEventKey.new()
 	shortcut.ctrl_pressed = true
@@ -36,8 +36,8 @@ func _enter_tree():
 
 func _exit_tree():
 	# Clean up menu items
-	remove_tool_menu_item(tr("Export Context"))
-	remove_tool_menu_item(tr("Quick Context"))
+	remove_tool_menu_item("Export Context")
+	remove_tool_menu_item("Quick Context")
 	# Remove command from EditorCommandPalette
 	get_editor_interface().get_command_palette().remove_command("quick_context")
 	# Free window if it exists
